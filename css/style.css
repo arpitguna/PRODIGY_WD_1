@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --theme-color: red;
+    --bg-light: #f4f4f4;
+}
+
+.py {
+    padding: 75px 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    background-color: black;
+    border-bottom: 2px solid red !important;
+}
+
+header a {
+    margin: 15px 20px;
+    letter-spacing: 1px;
+    transition: all 0.2s linear;
+    padding: 20px 0;
+    color: white !important;
+}
+
+header a:hover {
+    color: var(--theme-color) !important;
+}
+
+.mega {
+    position: relative;
+}
+
+.mega-item {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(0 0 0 / 54%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.mega-menu:hover .mega-item {
+    opacity: 1;
+    visibility: visible;
+}
+
+.navbar-scrolled {
+    background-color: white;
+    transition: 0.5s ease;
+}
+
+.navbar-scrolled li a {
+    color: black !important;
+}
+
+.navbar-scrolled a:hover {
+    color: red !important;
+    text-decoration: underline;
+}
+
+main {
+    margin-top: 100px;
+}
+
+.about-title h2::before,
+.service-title h2::before,
+.contact-title h2::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 2px;
+    background-color: black;
+}
+
+.about-title h2::after,
+.service-title h2::after,
+.contact-title h2::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75px;
+    height: 5px;
+    background-color: var(--theme-color);
+}
+
+.about-img-1 {
+    background-image: url('../images/about-1.webp');
+    width: 85%;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    border: 5px solid white;
+}
+
+.about-img-2 {
+    position: absolute;
+    top: 15%;
+    left: -15%;
+    background-image: url('../images/about-2.jpg');
+    width: 100%;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 5px solid white;
+}
+
+/* service  */
+.service {
+    margin-top: 80px;
+}
+
+.services-item {
+    margin: 5px;
+}
+
+.services-item i {
+    width: 50px;
+    height: 50px;
+    background-color: var(--theme-color);
+    padding: 20px;
+    border-radius: 50%;
+    position: relative;
+    transition: all 0.2s linear;
+}
+
+.services-item i::after {
+    content: '';
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 2px solid var(--theme-color);
+}
+
+.services-item:hover i {
+    color: var(--theme-color);
+    background-color: transparent;
+}
+
+.services-item h4 {
+    margin: 30px 0 15px 0;
+}
+
+/* contect  */
+.contect-item i {
+    color: var(--theme-color);
+}
+
+.contect-item {
+    background-color: var(--bg-light);
+    margin: 10px 0;
+}
+
+.contect-form {
+    background-color: var(--bg-light);
+    padding: 40px 0;
+}
+
+.form-control {
+    width: 97% !important;
+}
+
+.contect-form form a,
+.about-content a {
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: var(--theme-color);
+    color: white !important;
+    border: 2px solid transparent;
+    transition: all 0.2s linear;
+}
+
+.contect-form form a:hover,
+.about-content a:hover {
+    border-color: var(--theme-color) !important;
+    color: var(--theme-color) !important;
+}
+
+/* footer */
+footer {
+    background-color: var(--bg-light);
+}
+
+footer p {
+    margin-right: 25px;
+}
+
+.footer-icon a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+}
+
+.footer-link ul li a:hover,
+.copyright span,
+.footer-icon a:hover i {
+    color: var(--theme-color) !important;
+}
+
+.footer-icon a:hover {
+    border-color: transparent !important;
+    background-color: var(--theme-color);
+}
+
+.footer-icon a:hover i {
+    color: white !important;
+}
+
+/* copyright */
+.copyright {
+    background-color: #a3a3a398;
+    cursor: pointer;
+}
